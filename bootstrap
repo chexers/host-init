@@ -1,0 +1,17 @@
+#!/bin/bash
+
+has_binary() {
+    BINPATH=`which $1`
+    if [ -z $BINPATH ]; then
+        return false
+    else
+        return true
+    fi
+}
+
+if (has_binary "tmux"); then
+    echo "I gots tmux"
+else
+    echo "gots no tmux in hurr"
+fi
+
